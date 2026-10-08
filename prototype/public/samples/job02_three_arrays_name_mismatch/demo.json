@@ -1,0 +1,280 @@
+{
+ "checks": [
+  {
+   "id": "dc",
+   "label": "DC size matches everywhere",
+   "status": "pass",
+   "detail": "Contract 9.840 kW \u00b7 Designs 9.840 kW \u00b7 Site report 9.840 kW \u00b7 Salesforce 9.840 kW"
+  },
+  {
+   "id": "panels",
+   "label": "Panel count matches designs",
+   "status": "pass",
+   "detail": "Designs: 24 \u00b7 Equipment schedule: 24 \u00b7 Site report: 24"
+  },
+  {
+   "id": "audit",
+   "label": "Audit date vs signing date",
+   "status": "pass",
+   "detail": "Audit 06/10/2026, ADI signed 06-09-26 (1 day apart, max 2)"
+  },
+  {
+   "id": "envelope",
+   "label": "DocuSign envelope ID (contract vs disclosure)",
+   "status": "pass",
+   "detail": "Both end ...4A22"
+  },
+  {
+   "id": "names",
+   "label": "Customer name matches (ADI / contract / disclosure)",
+   "status": "pass",
+   "detail": "ADI \"Imogen Tarrant\" \u00b7 Contract \"Imogen Tarrant\" \u00b7 Disclosure \"Imogen Tarrant\""
+  },
+  {
+   "id": "ebill_name",
+   "label": "E-bill name vs contract name",
+   "status": "warn",
+   "detail": "Bill \"IMOGEN HALLORAN\" vs contract \"Imogen Tarrant\" - name clarification letter drafted (if it's a different person, request a missing-doc note instead)"
+  },
+  {
+   "id": "acct",
+   "label": "Utility account number legible",
+   "status": "pass",
+   "detail": "100 144 107 170"
+  },
+  {
+   "id": "meter",
+   "label": "Meter number matches Salesforce",
+   "status": "pass",
+   "detail": "E-bill GS-4471920 \u00b7 Salesforce GS-4471920"
+  },
+  {
+   "id": "chatter",
+   "label": "Chatter notes (DC changes / holds)",
+   "status": "pass",
+   "detail": "6/12/26 - No change in system size."
+  },
+  {
+   "id": "size",
+   "label": "System size under 25 kW DC",
+   "status": "pass",
+   "detail": "9.840 kW - no extra forms required"
+  },
+  {
+   "id": "fix_fin_email",
+   "label": "Finance email on ADI form",
+   "status": "fixed",
+   "detail": "Replaced outdated email \"utility@lightharbor.example\" with nj.incentives@lightharbor.example"
+  },
+  {
+   "id": "dates",
+   "label": "Signature dates on ADI form",
+   "status": "fixed",
+   "detail": "Filled in: finance signer date, finance signer printed name (from installer date 06-09-26)"
+  },
+  {
+   "id": "fix_cust_email",
+   "label": "Installer email on disclosure",
+   "status": "fixed",
+   "detail": "Replaced customer-service email with department email nj.incentives@sunridge-solar.example"
+  }
+ ],
+ "portal": [
+  {
+   "title": "Project and customer",
+   "fields": [
+    {
+     "label": "Project name (Last, First)",
+     "value": "Tarrant, Imogen"
+    },
+    {
+     "label": "First name",
+     "value": "Imogen"
+    },
+    {
+     "label": "Last name",
+     "value": "Tarrant"
+    },
+    {
+     "label": "Address",
+     "value": "9 Chestwood Street"
+    },
+    {
+     "label": "City",
+     "value": "Lakemont"
+    },
+    {
+     "label": "State",
+     "value": "NJ"
+    },
+    {
+     "label": "Zip",
+     "value": "07874"
+    },
+    {
+     "label": "Phone",
+     "value": "+19085550163"
+    },
+    {
+     "label": "Email",
+     "value": "imogen.tarrant@mailbox.example"
+    },
+    {
+     "label": "Utility account number",
+     "value": "100 144 107 170"
+    },
+    {
+     "label": "Meter number",
+     "value": "GS-4471920"
+    }
+   ]
+  },
+  {
+   "title": "Owner and installer",
+   "fields": [
+    {
+     "label": "Owner (financer)",
+     "value": "HarborLight Solar Finance LLC dba LightHarbor",
+     "flag": "Autofilled in the portal"
+    },
+    {
+     "label": "Solar installer",
+     "value": "Sunridge Solar LLC"
+    },
+    {
+     "label": "Contact person",
+     "value": "Dana Whitcomb"
+    },
+    {
+     "label": "License number",
+     "value": "13VH-0099-4417"
+    },
+    {
+     "label": "License expiry",
+     "value": "03/31/2027"
+    }
+   ]
+  },
+  {
+   "title": "Project type (always the same for these jobs)",
+   "fields": [
+    {
+     "label": "Interconnection type",
+     "value": "Behind the meter"
+    },
+    {
+     "label": "Market segment",
+     "value": "Net metered residential"
+    },
+    {
+     "label": "Registration type",
+     "value": "New registration"
+    },
+    {
+     "label": "Installation type",
+     "value": "Rooftop"
+    },
+    {
+     "label": "Customer type",
+     "value": "Residential"
+    },
+    {
+     "label": "Tariff",
+     "value": "Residential"
+    },
+    {
+     "label": "Electrical company",
+     "value": "Garden State Power & Light"
+    },
+    {
+     "label": "Total install cost",
+     "value": "$47,980"
+    }
+   ]
+  },
+  {
+   "title": "Inverter",
+   "fields": [
+    {
+     "label": "Quantity",
+     "value": "1"
+    },
+    {
+     "label": "Manufacturer",
+     "value": "InverTech"
+    },
+    {
+     "label": "Model",
+     "value": "IT7600H-US"
+    },
+    {
+     "label": "AC size",
+     "value": "7.6 kW  (state AI tool wants 7600 W)"
+    },
+    {
+     "label": "Peak efficiency",
+     "value": "0.97 (always)"
+    },
+    {
+     "label": "Location",
+     "value": "Outdoor (placeholder)"
+    }
+   ]
+  }
+ ],
+ "arrays": [
+  {
+   "roof": 1,
+   "qty": 9,
+   "rating": "0.410",
+   "manufacturer": "NOVASUN",
+   "model": "NS DUO BLK ML-G10 410",
+   "location": "Roof",
+   "azimuth": 281,
+   "tilt": 22,
+   "tracking": "Fixed",
+   "access": 72,
+   "design": 3364,
+   "ideal": 3142
+  },
+  {
+   "roof": 2,
+   "qty": 4,
+   "rating": "0.410",
+   "manufacturer": "NOVASUN",
+   "model": "NS DUO BLK ML-G10 410",
+   "location": "Roof",
+   "azimuth": 101,
+   "tilt": 19,
+   "tracking": "Fixed",
+   "access": 70,
+   "design": 1796,
+   "ideal": 1721
+  },
+  {
+   "roof": 3,
+   "qty": 11,
+   "rating": "0.410",
+   "manufacturer": "NOVASUN",
+   "model": "NS DUO BLK ML-G10 410",
+   "location": "Roof",
+   "azimuth": 191,
+   "tilt": 20,
+   "tracking": "Fixed",
+   "access": 88,
+   "design": 4736,
+   "ideal": 4529
+  }
+ ],
+ "watchouts": [
+  "E-bill name vs contract name: Bill \"IMOGEN HALLORAN\" vs contract \"Imogen Tarrant\" - name clarification letter drafted (if it's a different person, request a missing-doc note instead)"
+ ],
+ "expectedOutputs": [
+  "1_ADI.pdf",
+  "2_Contract.pdf",
+  "3_Disclosure.pdf",
+  "4_EBill.pdf",
+  "5_Designs.pdf",
+  "6_Name_Clarification.pdf"
+ ]
+}

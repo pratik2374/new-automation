@@ -1,0 +1,17 @@
+# dependencies / build output
+node_modules/
+.next/
+__pycache__/
+*.pyc
+
+# video frames + contact sheets taken from the client's recordings (contain real customer data)
+frames/
+sheets/
+
+# third-party skills installed by `npx skills add` (re-installable)
+.agents/
+skills-lock.json
+
+# local env / logs
+.env*
+*.log

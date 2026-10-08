@@ -1,0 +1,272 @@
+{
+ "checks": [
+  {
+   "id": "dc",
+   "label": "DC size matches everywhere",
+   "status": "fail",
+   "detail": "Contract 6.150 kW \u00b7 Designs 5.740 kW \u00b7 Site report 6.560 kW \u00b7 Salesforce 6.150 kW"
+  },
+  {
+   "id": "panels",
+   "label": "Panel count matches designs",
+   "status": "fail",
+   "detail": "Designs: 14 \u00b7 Equipment schedule: 14 \u00b7 Site report: 16 - site report may be outdated"
+  },
+  {
+   "id": "audit",
+   "label": "Audit date vs signing date",
+   "status": "fail",
+   "detail": "Audit 06/15/2026, ADI signed 06-18-26 (3 days apart, max 2)"
+  },
+  {
+   "id": "envelope",
+   "label": "DocuSign envelope ID (contract vs disclosure)",
+   "status": "fail",
+   "detail": "Contract ...9AB3 but disclosure ...E4F5 - wrong DocuSign form, request the correct one"
+  },
+  {
+   "id": "names",
+   "label": "Customer name matches (ADI / contract / disclosure)",
+   "status": "pass",
+   "detail": "ADI \"Corinne Delacroix\" \u00b7 Contract \"Corinne Delacroix\" \u00b7 Disclosure \"Corinne Delacroix\""
+  },
+  {
+   "id": "ebill_name",
+   "label": "E-bill name vs contract name",
+   "status": "pass",
+   "detail": "Both \"Corinne Delacroix\""
+  },
+  {
+   "id": "acct",
+   "label": "Utility account number legible",
+   "status": "fail",
+   "detail": "E-bill reads \"70### ##### 9\" - digits unreadable, take from Salesforce (70611 48320 9) or ask the customer"
+  },
+  {
+   "id": "meter",
+   "label": "Meter number matches Salesforce",
+   "status": "pass",
+   "detail": "E-bill 701190334 \u00b7 Salesforce 701190334"
+  },
+  {
+   "id": "chatter",
+   "label": "Chatter notes (DC changes / holds)",
+   "status": "warn",
+   "detail": "6/20/26 - DC increased from 5.74 kW to 6.15 kW per change order. Designs NOT yet updated."
+  },
+  {
+   "id": "size",
+   "label": "System size under 25 kW DC",
+   "status": "pass",
+   "detail": "5.740 kW - no extra forms required"
+  },
+  {
+   "id": "fix_fin_email",
+   "label": "Finance email on ADI form",
+   "status": "fixed",
+   "detail": "Replaced outdated email \"utility@lightharbor.example\" with nj.incentives@lightharbor.example"
+  },
+  {
+   "id": "dates",
+   "label": "Signature dates on ADI form",
+   "status": "fixed",
+   "detail": "Filled in: finance signer date, customer date, finance signer printed name (from installer date 06-18-26)"
+  },
+  {
+   "id": "fix_cust_email",
+   "label": "Installer email on disclosure",
+   "status": "fixed",
+   "detail": "Replaced customer-service email with department email nj.incentives@sunridge-solar.example"
+  }
+ ],
+ "portal": [
+  {
+   "title": "Project and customer",
+   "fields": [
+    {
+     "label": "Project name (Last, First)",
+     "value": "Delacroix, Corinne"
+    },
+    {
+     "label": "First name",
+     "value": "Corinne"
+    },
+    {
+     "label": "Last name",
+     "value": "Delacroix"
+    },
+    {
+     "label": "Address",
+     "value": "302 Alder Lane"
+    },
+    {
+     "label": "City",
+     "value": "Pinebrook"
+    },
+    {
+     "label": "State",
+     "value": "NJ"
+    },
+    {
+     "label": "Zip",
+     "value": "07058"
+    },
+    {
+     "label": "Phone",
+     "value": "+18565550190"
+    },
+    {
+     "label": "Email",
+     "value": "c.delacroix@mailbox.example"
+    },
+    {
+     "label": "Utility account number",
+     "value": "70611 48320 9",
+     "flag": "Unreadable on e-bill - taken from Salesforce"
+    },
+    {
+     "label": "Meter number",
+     "value": "701190334"
+    }
+   ]
+  },
+  {
+   "title": "Owner and installer",
+   "fields": [
+    {
+     "label": "Owner (financer)",
+     "value": "HarborLight Solar Finance LLC dba LightHarbor",
+     "flag": "Autofilled in the portal"
+    },
+    {
+     "label": "Solar installer",
+     "value": "Sunridge Solar LLC"
+    },
+    {
+     "label": "Contact person",
+     "value": "Dana Whitcomb"
+    },
+    {
+     "label": "License number",
+     "value": "13VH-0099-4417"
+    },
+    {
+     "label": "License expiry",
+     "value": "03/31/2027"
+    }
+   ]
+  },
+  {
+   "title": "Project type (always the same for these jobs)",
+   "fields": [
+    {
+     "label": "Interconnection type",
+     "value": "Behind the meter"
+    },
+    {
+     "label": "Market segment",
+     "value": "Net metered residential"
+    },
+    {
+     "label": "Registration type",
+     "value": "New registration"
+    },
+    {
+     "label": "Installation type",
+     "value": "Rooftop"
+    },
+    {
+     "label": "Customer type",
+     "value": "Residential"
+    },
+    {
+     "label": "Tariff",
+     "value": "Residential"
+    },
+    {
+     "label": "Electrical company",
+     "value": "Meridian Electric"
+    },
+    {
+     "label": "Total install cost",
+     "value": "$30,120"
+    }
+   ]
+  },
+  {
+   "title": "Inverter",
+   "fields": [
+    {
+     "label": "Quantity",
+     "value": "1"
+    },
+    {
+     "label": "Manufacturer",
+     "value": "InverTech"
+    },
+    {
+     "label": "Model",
+     "value": "IT7600H-US"
+    },
+    {
+     "label": "AC size",
+     "value": "7.6 kW  (state AI tool wants 7600 W)"
+    },
+    {
+     "label": "Peak efficiency",
+     "value": "0.97 (always)"
+    },
+    {
+     "label": "Location",
+     "value": "Outdoor (placeholder)"
+    }
+   ]
+  }
+ ],
+ "arrays": [
+  {
+   "roof": 1,
+   "qty": 8,
+   "rating": "0.410",
+   "manufacturer": "NOVASUN",
+   "model": "NS DUO BLK ML-G10 410",
+   "location": "Roof",
+   "azimuth": 180,
+   "tilt": 25,
+   "tracking": "Fixed",
+   "access": 90,
+   "design": 3402,
+   "ideal": 3199
+  },
+  {
+   "roof": 2,
+   "qty": 6,
+   "rating": "0.410",
+   "manufacturer": "NOVASUN",
+   "model": "NS DUO BLK ML-G10 410",
+   "location": "Roof",
+   "azimuth": 270,
+   "tilt": 25,
+   "tracking": "Fixed",
+   "access": 84,
+   "design": 2540,
+   "ideal": 2310,
+   "flag": "site report says 8 modules"
+  }
+ ],
+ "watchouts": [
+  "DC size matches everywhere: Contract 6.150 kW \u00b7 Designs 5.740 kW \u00b7 Site report 6.560 kW \u00b7 Salesforce 6.150 kW",
+  "Panel count matches designs: Designs: 14 \u00b7 Equipment schedule: 14 \u00b7 Site report: 16 - site report may be outdated",
+  "Audit date vs signing date: Audit 06/15/2026, ADI signed 06-18-26 (3 days apart, max 2)",
+  "DocuSign envelope ID (contract vs disclosure): Contract ...9AB3 but disclosure ...E4F5 - wrong DocuSign form, request the correct one",
+  "Utility account number legible: E-bill reads \"70### ##### 9\" - digits unreadable, take from Salesforce (70611 48320 9) or ask the customer",
+  "Chatter notes (DC changes / holds): 6/20/26 - DC increased from 5.74 kW to 6.15 kW per change order. Designs NOT yet updated."
+ ],
+ "expectedOutputs": [
+  "1_ADI.pdf",
+  "2_Contract.pdf",
+  "3_Disclosure.pdf",
+  "4_EBill.pdf",
+  "5_Designs.pdf"
+ ]
+}

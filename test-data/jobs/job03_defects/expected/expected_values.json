@@ -1,0 +1,117 @@
+{
+  "job_id": "job03_defects",
+  "scenario": "Deliberate defects: DC mismatch, stale site report, audit date off, wrong DocuSign ID, missing date",
+  "customer": {
+    "first": "Corinne",
+    "last": "Delacroix",
+    "email": "c.delacroix@mailbox.example",
+    "phone": "+18565550190",
+    "contract_full_name": "Corinne Delacroix",
+    "ebill_name": "CORINNE DELACROIX"
+  },
+  "site": {
+    "addr": "302 Alder Lane",
+    "city": "Pinebrook",
+    "state": "NJ",
+    "zip": "07058"
+  },
+  "utility": {
+    "name": "Meridian Electric",
+    "short": "MEC",
+    "acct": "70611 48320 9",
+    "meter": "701190334",
+    "tariff": "Residential"
+  },
+  "salesforce": {
+    "total_install_cost": 30120.0,
+    "finance_partner": "LightHarbor",
+    "system_size_kw_in_salesforce": 6.15,
+    "chatter": [
+      "6/20/26 - DC increased from 5.74 kW to 6.15 kW per change order. Designs NOT yet updated."
+    ],
+    "state_program_fields": {
+      "prelim_state_status": "Submitted (after run)",
+      "follow_up_weeks": 4
+    }
+  },
+  "portal_values": {
+    "interconnection_type": "Behind the meter",
+    "market_segment": "Net metered residential",
+    "registration_type": "New registration",
+    "installation_type": "Rooftop",
+    "owner": "financer (autofilled)",
+    "installer": "Sunridge Solar LLC",
+    "contact": "Dana Whitcomb",
+    "license": "13VH-0099-4417",
+    "license_expiry": "03/31/2027",
+    "customer_type": "Residential",
+    "tariff": "Residential",
+    "inverter": {
+      "quantity": 1,
+      "manufacturer": "InverTech",
+      "model": "IT7600H-US",
+      "ac_kw": 7.6,
+      "peak_efficiency": 0.97,
+      "location": "Outdoor",
+      "ai_tool_continuous_rating_w": 7600.0
+    },
+    "arrays": [
+      {
+        "roof": 1,
+        "quantity": 8,
+        "rating_dc_kw": 0.41,
+        "manufacturer": "NovaSun",
+        "model": "NS DUO BLK ML-G10 410",
+        "location": "Roof",
+        "orientation_azimuth": 180,
+        "tilt": 25,
+        "tracking": "Fixed",
+        "solar_access_pct": 90,
+        "design_system_rated_output_kwh": 3402,
+        "ideal_system_rated_output_kwh": 3199
+      },
+      {
+        "roof": 2,
+        "quantity": 6,
+        "rating_dc_kw": 0.41,
+        "manufacturer": "NovaSun",
+        "model": "NS DUO BLK ML-G10 410",
+        "location": "Roof",
+        "orientation_azimuth": 270,
+        "tilt": 25,
+        "tracking": "Fixed",
+        "solar_access_pct": 84,
+        "design_system_rated_output_kwh": 2540,
+        "ideal_system_rated_output_kwh": 2310
+      }
+    ],
+    "total_panels": 14,
+    "total_dc_kw_design": 5.74,
+    "total_dc_kw_contract": 6.15
+  },
+  "expected_checks": {
+    "dc_size_contract_vs_design_vs_chatter": "FAIL",
+    "panel_count_site_report_vs_designs": "FAIL",
+    "audit_date_within_2_days_of_signing": "FAIL",
+    "docusign_envelope_id_matches_disclosure": "FAIL",
+    "all_signature_dates_present": "FAIL",
+    "ebill_name_matches_contract": "PASS",
+    "ebill_account_number_legible": "FAIL",
+    "lightreach_email_swapped": "FIXED_IN_FINAL",
+    "customer_service_email_swapped_on_disclosure": "FIXED_IN_FINAL"
+  },
+  "name_clarification_required": false,
+  "final_documents": [
+    "1_ADI.pdf",
+    "2_Contract.pdf",
+    "3_Disclosure.pdf",
+    "4_EBill.pdf",
+    "5_Designs.pdf"
+  ],
+  "state_ai_tool_known_issues_to_reproduce": [
+    "lumps all panels into one array",
+    "drops middle digits of utility account number",
+    "pre-fills an outdated license number",
+    "inverter continuous rating must be a whole number (W)"
+  ]
+}

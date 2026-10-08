@@ -1,0 +1,47 @@
+[
+ {
+  "id": "job01_clean",
+  "title": "Job 1 - Baseline (14 panels, 2 arrays, clean)",
+  "files": [
+   "Combined Pack.pdf",
+   "Combined Pack_AuditTrail.pdf",
+   "Electric Bill.pdf",
+   "FULL SET Designs.pdf",
+   "Installer Signature Forms.pdf",
+   "LightHarbor PPA Contract.pdf",
+   "LightHarbor Signature Forms.pdf",
+   "SITE REPORT.pdf",
+   "salesforce_opportunity.json"
+  ]
+ },
+ {
+  "id": "job02_three_arrays_name_mismatch",
+  "title": "Job 2 - 3 arrays + e-bill name mismatch",
+  "files": [
+   "Combined Pack.pdf",
+   "Combined Pack_AuditTrail.pdf",
+   "Electric Bill.pdf",
+   "FULL SET Designs.pdf",
+   "Installer Signature Forms.pdf",
+   "LightHarbor PPA Contract.pdf",
+   "LightHarbor Signature Forms.pdf",
+   "SITE REPORT.pdf",
+   "salesforce_opportunity.json"
+  ]
+ },
+ {
+  "id": "job03_defects",
+  "title": "Job 3 - Deliberate defects (DC, dates, DocuSign, e-bill)",
+  "files": [
+   "Combined Pack.pdf",
+   "Combined Pack_AuditTrail.pdf",
+   "Electric Bill.pdf",
+   "FULL SET Designs.pdf",
+   "Installer Signature Forms.pdf",
+   "LightHarbor PPA Contract.pdf",
+   "LightHarbor Signature Forms.pdf",
+   "SITE REPORT.pdf",
+   "salesforce_opportunity.json"
+  ]
+ }
+]

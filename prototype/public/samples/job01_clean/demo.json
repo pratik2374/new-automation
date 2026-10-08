@@ -1,0 +1,263 @@
+{
+ "checks": [
+  {
+   "id": "dc",
+   "label": "DC size matches everywhere",
+   "status": "pass",
+   "detail": "Contract 5.740 kW \u00b7 Designs 5.740 kW \u00b7 Site report 5.740 kW \u00b7 Salesforce 5.740 kW"
+  },
+  {
+   "id": "panels",
+   "label": "Panel count matches designs",
+   "status": "pass",
+   "detail": "Designs: 14 \u00b7 Equipment schedule: 14 \u00b7 Site report: 14"
+  },
+  {
+   "id": "audit",
+   "label": "Audit date vs signing date",
+   "status": "pass",
+   "detail": "Audit 06/18/2026, ADI signed 06-18-26 (0 days apart, max 2)"
+  },
+  {
+   "id": "envelope",
+   "label": "DocuSign envelope ID (contract vs disclosure)",
+   "status": "pass",
+   "detail": "Both end ...3974"
+  },
+  {
+   "id": "names",
+   "label": "Customer name matches (ADI / contract / disclosure)",
+   "status": "pass",
+   "detail": "ADI \"Alanna Whitfield\" \u00b7 Contract \"Alanna Whitfield\" \u00b7 Disclosure \"Alanna Whitfield\""
+  },
+  {
+   "id": "ebill_name",
+   "label": "E-bill name vs contract name",
+   "status": "pass",
+   "detail": "Both \"Alanna Whitfield\""
+  },
+  {
+   "id": "acct",
+   "label": "Utility account number legible",
+   "status": "pass",
+   "detail": "70536 92000 5"
+  },
+  {
+   "id": "meter",
+   "label": "Meter number matches Salesforce",
+   "status": "pass",
+   "detail": "E-bill 701175788 \u00b7 Salesforce 701175788"
+  },
+  {
+   "id": "chatter",
+   "label": "Chatter notes (DC changes / holds)",
+   "status": "pass",
+   "detail": "6/25/26 - No increase or decrease in system size. LR prelim state approval pending."
+  },
+  {
+   "id": "size",
+   "label": "System size under 25 kW DC",
+   "status": "pass",
+   "detail": "5.740 kW - no extra forms required"
+  },
+  {
+   "id": "fix_fin_email",
+   "label": "Finance email on ADI form",
+   "status": "fixed",
+   "detail": "Replaced outdated email \"utility@lightharbor.example\" with nj.incentives@lightharbor.example"
+  },
+  {
+   "id": "dates",
+   "label": "Signature dates on ADI form",
+   "status": "fixed",
+   "detail": "Filled in: finance signer date, finance signer printed name (from installer date 06-18-26)"
+  },
+  {
+   "id": "fix_cust_email",
+   "label": "Installer email on disclosure",
+   "status": "fixed",
+   "detail": "Replaced customer-service email with department email nj.incentives@sunridge-solar.example"
+  }
+ ],
+ "portal": [
+  {
+   "title": "Project and customer",
+   "fields": [
+    {
+     "label": "Project name (Last, First)",
+     "value": "Whitfield, Alanna"
+    },
+    {
+     "label": "First name",
+     "value": "Alanna"
+    },
+    {
+     "label": "Last name",
+     "value": "Whitfield"
+    },
+    {
+     "label": "Address",
+     "value": "41 Sycamore Court"
+    },
+    {
+     "label": "City",
+     "value": "Ridgemont"
+    },
+    {
+     "label": "State",
+     "value": "NJ"
+    },
+    {
+     "label": "Zip",
+     "value": "07999"
+    },
+    {
+     "label": "Phone",
+     "value": "+19735550117"
+    },
+    {
+     "label": "Email",
+     "value": "alanna.whitfield77@mailbox.example"
+    },
+    {
+     "label": "Utility account number",
+     "value": "70536 92000 5"
+    },
+    {
+     "label": "Meter number",
+     "value": "701175788"
+    }
+   ]
+  },
+  {
+   "title": "Owner and installer",
+   "fields": [
+    {
+     "label": "Owner (financer)",
+     "value": "HarborLight Solar Finance LLC dba LightHarbor",
+     "flag": "Autofilled in the portal"
+    },
+    {
+     "label": "Solar installer",
+     "value": "Sunridge Solar LLC"
+    },
+    {
+     "label": "Contact person",
+     "value": "Dana Whitcomb"
+    },
+    {
+     "label": "License number",
+     "value": "13VH-0099-4417"
+    },
+    {
+     "label": "License expiry",
+     "value": "03/31/2027"
+    }
+   ]
+  },
+  {
+   "title": "Project type (always the same for these jobs)",
+   "fields": [
+    {
+     "label": "Interconnection type",
+     "value": "Behind the meter"
+    },
+    {
+     "label": "Market segment",
+     "value": "Net metered residential"
+    },
+    {
+     "label": "Registration type",
+     "value": "New registration"
+    },
+    {
+     "label": "Installation type",
+     "value": "Rooftop"
+    },
+    {
+     "label": "Customer type",
+     "value": "Residential"
+    },
+    {
+     "label": "Tariff",
+     "value": "Residential"
+    },
+    {
+     "label": "Electrical company",
+     "value": "Meridian Electric"
+    },
+    {
+     "label": "Total install cost",
+     "value": "$31,450"
+    }
+   ]
+  },
+  {
+   "title": "Inverter",
+   "fields": [
+    {
+     "label": "Quantity",
+     "value": "1"
+    },
+    {
+     "label": "Manufacturer",
+     "value": "InverTech"
+    },
+    {
+     "label": "Model",
+     "value": "IT7600H-US"
+    },
+    {
+     "label": "AC size",
+     "value": "7.6 kW  (state AI tool wants 7600 W)"
+    },
+    {
+     "label": "Peak efficiency",
+     "value": "0.97 (always)"
+    },
+    {
+     "label": "Location",
+     "value": "Outdoor (placeholder)"
+    }
+   ]
+  }
+ ],
+ "arrays": [
+  {
+   "roof": 1,
+   "qty": 8,
+   "rating": "0.410",
+   "manufacturer": "NOVASUN",
+   "model": "NS DUO BLK ML-G10 410",
+   "location": "Roof",
+   "azimuth": 329,
+   "tilt": 18,
+   "tracking": "Fixed",
+   "access": 81,
+   "design": 2998,
+   "ideal": 2610
+  },
+  {
+   "roof": 2,
+   "qty": 6,
+   "rating": "0.410",
+   "manufacturer": "NOVASUN",
+   "model": "NS DUO BLK ML-G10 410",
+   "location": "Roof",
+   "azimuth": 149,
+   "tilt": 18,
+   "tracking": "Fixed",
+   "access": 82,
+   "design": 3080,
+   "ideal": 2717
+  }
+ ],
+ "watchouts": [],
+ "expectedOutputs": [
+  "1_ADI.pdf",
+  "2_Contract.pdf",
+  "3_Disclosure.pdf",
+  "4_EBill.pdf",
+  "5_Designs.pdf"
+ ]
+}
